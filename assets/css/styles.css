@@ -700,9 +700,9 @@ img {
 .skills.hide .skills__time {
   display: none;
 }
-/*.skills.hide .skills__stars {
+.skills.hide .skills__stars {
   display: none;
-}*/
+}
 
 /*========== CERTIFICATES ==========*/
 .certificate__content {
