@@ -30,7 +30,7 @@
   --font-medium: 500;
   --font-semi-bold: 600;
 
-  /*========== Margenes ==========*/
+  /*========== Margins ==========*/
   --mb-1: 0.5rem;
   --mb-2: 1rem;
   --mb-3: 1.5rem;
@@ -386,12 +386,16 @@ img {
   font-size: var(--small-font-size);
 }
 
+.home__information-terminal {
+  font-weight: 800;
+}
+
 .home__icon {
   font-size: 1.2rem;
   margin-right: 0.25rem;
 }
 
-.home__button-movil {
+.home__button-mobile {
   display: inline-block;
   border: 2px solid var(--text-color);
   color: var(--title-color);
@@ -402,7 +406,7 @@ img {
   margin-top: var(--mb-3);
 }
 
-.home__button-movil:hover {
+.home__button-mobile:hover {
   background-color: var(--text-color);
   color: var(--container-color);
 }
@@ -694,7 +698,6 @@ img {
   padding: 0 0.25rem;
   top: 0;
   left: 0;
-
 }
 
 .skills.hide .skills__time {
@@ -784,11 +787,9 @@ img {
 /*========== MEDIA QUERIES ==========*/
 
 @media screen and (max-width: 968px) {
-
   .skills__content {
     justify-items: center;
   }
-
 }
 @media screen and (max-width: 520px) {
   .skills.show .skills__content {
@@ -808,8 +809,6 @@ img {
   }
 }
 /* For small devices, menu two columns */
-
-
 
 /* Classes modified for large screen size */
 @media screen and (min-width: 968px) {
@@ -832,6 +831,7 @@ img {
     grid-template-columns: 0.5fr 1fr;
     background-color: var(--container-color);
     box-shadow: 0 0 8px rgba(13, 12, 12, 0.15);
+    position: relative;
   }
 
   .resume__left {
@@ -856,7 +856,7 @@ img {
     gap: 1.5rem;
   }
 
-  .home__button-movil {
+  .home__button-mobile {
     display: none;
   }
 

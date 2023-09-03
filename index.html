@@ -1,455 +1,516 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--========== BOX ICONS ==========-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
 
     <!--========== CSS ==========-->
-    <link rel="stylesheet" href="assets/css/styles.css">
-
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
     <title>Eric Alpízar</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!--========== HEADER ==========-->
-    <header class=" l-header" id="header">
-        <nav class="nav bd-container">
-            <a href="#" class="nav__logo">Erick</a>
+    <header class="l-header" id="header">
+      <nav class="nav bd-container">
+        <a href="#" class="nav__logo">Erick</a>
 
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link">
-                            <i class='bx bx-home nav__icon'></i>Home
-                        </a>
-                    </li>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link">
+                <i class="bx bx-home nav__icon"></i>Home
+              </a>
+            </li>
 
-                    <li class="nav__item">
-                        <a href="#profile" class="nav__link">
-                            <i class='bx bx-user nav__icon'></i>Profile
-                        </a>
-                    </li>
+            <li class="nav__item">
+              <a href="#profile" class="nav__link">
+                <i class="bx bx-user nav__icon"></i>Profile
+              </a>
+            </li>
 
-                    <li class="nav__item">
-                        <a href="#education" class="nav__link">
-                            <i class='bx bx-book nav__icon'></i>Education
-                        </a>
-                    </li>
+            <li class="nav__item">
+              <a href="#education" class="nav__link">
+                <i class="bx bx-book nav__icon"></i>Education
+              </a>
+            </li>
 
-                    <li class="nav__item">
-                        <a href="#skills" class="nav__link">
-                            <i class='bx bx-receipt nav__icon'></i>Technologies
-                        </a>
-                    </li>
+            <li class="nav__item">
+              <a href="#skills" class="nav__link">
+                <i class="bx bx-receipt nav__icon"></i>Technologies
+              </a>
+            </li>
 
-                    <li class="nav__item">
-                        <a href="#experience" class="nav__link">
-                            <i class='bx bx-briefcase-alt nav__icon'></i>Experience
-                        </a>
-                    </li>
+            <li class="nav__item">
+              <a href="#experience" class="nav__link">
+                <i class="bx bx-briefcase-alt nav__icon"></i>Experience
+              </a>
+            </li>
 
-                    <li class="nav__item">
-                        <a href="#certificates" class="nav__link">
-                            <i class='bx bx-award nav__icon'></i>Certificates
-                        </a>
-                    </li>
+            <li class="nav__item">
+              <a href="#certificates" class="nav__link">
+                <i class="bx bx-award nav__icon"></i>Certificates
+              </a>
+            </li>
+          </ul>
+        </div>
 
-                    <!-- <li class="nav__item">
-                        <a href="#references" class="nav__link">
-                            <i class='bx bx-link-external nav__icon'></i>References
-                        </a>
-                    </li> -->
-                </ul>
-            </div>
-
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-grid-alt'></i>
-            </div>
-        </nav>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-grid-alt"></i>
+        </div>
+      </nav>
     </header>
 
     <main class="l-main bd-container">
-        <!-- All elements within this div, is generated in PDF -->
-        <div class="resume" id="area-cv">
-            <div class="resume__left">
-                <!--========== HOME ==========-->
-                <section class="home" id="home">
-                    <div class="home__container section bd-grid">
-                        <div class="home__data bd-grid">
-                            <img src="assets/img/profile_photo.jpg" alt="" class="home__img">
+      <!-- All elements within this div, is generated in PDF -->
+      <div class="resume" id="area-cv">
+        <div class="resume__left">
+          <!--========== HOME ==========-->
+          <section class="home" id="home">
+            <div class="home__container section bd-grid">
+              <div class="home__data bd-grid">
+                <img
+                  src="assets/img/profile_photo_main.JPG"
+                  alt=""
+                  class="home__img"
+                />
 
-                            <h1 class="home__title">ERICK <b>ALPÍZAR</b></h1>
+                <h1 class="home__title">ERICK <b>ALPÍZAR</b></h1>
 
-                            <h3 class="home__profession">Computer Science and Engineering Student</h3>
+                <h3 class="home__profession">
+                  Computer Science and Engineering Student
+                </h3>
 
-                            <!-- Button to download yout CV saved in the pdf folder. Available for mobile -->
-                            <div>
-                                <a download="" href="assets/pdf/Erick Alpizar CV.pdf" class="home__button-movil">Download</a>
-                            </div>
-                        </div>
+                <!-- Button to download yout CV saved in the pdf folder. Available for mobile -->
+                <div>
+                  <a
+                    download=""
+                    href="assets/pdf/Erick Alpizar CV.pdf"
+                    class="home__button-mobile"
+                    >Download</a
+                  >
+                </div>
+              </div>
 
-                        <div class="home__address bd-grid">
-                            <span class="home__information">
-                                <i class='bx bx-map home__icon'></i> Santa Ana. San José, Costa Rica
-                            </span>
+              <div class="home__address bd-grid">
+                <span class="home__information">
+                  <i class="bx bx-map home__icon"></i> Santa Ana. San José,
+                  Costa Rica
+                </span>
 
-                            <span class="home__information">
-                                <i class='bx bx-envelope home__icon'></i> ericalpizar@gmail.com
-                            </span>
+                <span class="home__information">
+                  <i class="bx bx-envelope home__icon"></i>
+                  ericalpizar@gmail.com
+                </span>
 
-                            <span class="home__information">
-                                <i class='bx bx-phone home__icon'></i> (+506) 84047487
-                            </span>
-                        </div>
-
-                    </div>
-
-                    <!-- Theme change button -->
-                    <i class="bx bx-moon change-theme" title="Theme" id="theme-button"></i>
-
-                    <!-- Button to generate and download the pdf. Available for desktop. -->
-                    <i class="bx bx-download generate-pdf" title="Generate PDF" id="resume-button"></i>
-
-                </section>
-
-                <!--========== SOCIAL ==========-->
-                <section class="social section">
-                    <h2 class="section-title">SOCIAL</h2>
-
-                    <div class="social__container bd-grid">
-                        <a href="https://www.linkedin.com/in/eric-alpizar-133567169/" target="_black" class="social__link">
-                            <i class='bx bxl-linkedin-square social__icon'></i> @Eric Alpizar
-                        </a>
-
-                        <a href="https://github.com/ealpizarp" target="_black" class="social__link">
-                            <i class='bx bxl-github social__icon'></i> @ealpizarp
-                        </a>
-<!-- 
-                        <a href="https://twitter.com/FrankSiret" target="_black" class="social__link">
-                            <i class='bx bxl-twitter social__icon'></i> @FrankSiret
-                        </a> -->
-
-                        <!-- <a href="https://stackoverflow.com/users/11278974/franksiret?tab=profile" target="_black"
-                            class="social__link">
-                            <i class='bx bxl-stack-overflow social__icon'></i> @FrankSiret
-                        </a>
-
-                        <a href="https://www.instagram.com/franksiret/" target="_black" class="social__link">
-                            <i class='bx bxl-instagram social__icon'></i> @FrankSiret
-                        </a> -->
-                    </div>
-                </section>
-
-                <!--========== PROFILE ==========-->
-                <section class="profile section" id="profile">
-                    <h2 class="section-title">Profile</h2>
-
-                    <p class="profile__description">
-                        From a young age, my strong interest in technology has been a defining aspect of my personality. Pursuing a degree 
-                        in Computer Science and Engineering has allowed me to deepen my skills in algorithms, mathematics, and other technical
-                        fields that have always fascinated me. I take pleasure in continuously learning new things and tackling challenges with
-                        creativity and innovation. 
-                    </p>
-                </section>
-
-                <!--========== EDUCATION ==========-->
-               
-
-
-                <!--========== SKILLS  ==========-->
-                <section class="skills section hide" id="skills">
-                    <h2 class="section-title">Technologies</h2>
-
-                    <div class="skills__content bd-grid">
-                        <div class="skills__name">
-                            <span class="skills__circle"></span> Java
-                            <!-- <div class="skills__time-stars" title="4 Stars"></div>
-                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>4</span> -->
-                        </div>
-                        <div class="skills__name">
-                            <span class="skills__circle"></span> Python
-                            <!-- <div class="skills__time-stars" title="4 Stars"></div>
-                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>4</span> -->
-                        </div>
-                        <div class="skills__name">
-                            <span class="skills__circle"></span> C/C++
-                            <!-- <div class="skills__time-stars" title="4 Stars"></div>
-                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>4</span> -->
-                        </div>
-                        <div class="skills__name">
-                            <span class="skills__circle"></span> HTML
-                            <!-- <div class="skills__time-stars" title="5 Stars"></div>
-                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>5</span> -->
-                        </div>
-                        <div class="skills__name">
-                            <span class="skills__circle"></span> CSS
-                            <!-- <div class="skills__time-stars" title="5 Stars"></div>
-                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>5</span> -->
-                        </div>
-                        <div class="skills__name">
-                            <span class="skills__circle"></span> JavaScript
-                            <!-- <div class="skills__time-stars" title="5 Stars"></div>
-                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>5</span> -->
-                        </div>
-                        <div class="skills__name">
-                            <span class="skills__circle"></span> Typescript
-                            <!-- <div class="skills__time-stars" title="4 Stars"></div>
-                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>4</span> -->
-                        </div>
-                        <div class="skills__name">
-                            <span class="skills__circle"></span> PHP
-                            <!-- <div class="skills__time-stars" title="3 Stars"></div>
-                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>4</span> -->
-                        </div>
-                        <div class="skills__name">
-                            <span class="skills__circle"></span> SQL
-                            <!-- <div class="skills__time-stars" title="4 Stars"></div>
-                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>4</span> -->
-                        </div>
-                        <div class="skills__name">
-                            <span class="skills__circle"></span> Node JS
-                            <!-- <div class="skills__time-stars" title="4 Stars"></div>
-                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>4</span> -->
-                        </div>
-                        <div class="skills__name">
-                            <span class="skills__circle"></span> Frontend Frameworks & Libraries
-                            <!-- <div class="skills__time-stars" title="3 Stars"></div>
-                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>3</span> -->
-                        </div>
-                        <div class="skills__name">
-                            <span class="skills__circle"></span> Non-relational DBs
-                            <!-- <div class="skills__time-stars" title="3 Stars"></div>
-                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>3</span> -->
-                        </div>
-                        <div class="skills__name">
-                            <span class="skills__circle"></span> AWS Services
-                            <!-- <div class="skills__time-stars" title="3 Stars"></div>
-                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>3</span> -->
-                        </div>
-                        <div class="skills__name">
-                            <span class="skills__circle"></span> Linux & Shell
-                            <!-- <div class="skills__time-stars" title="5 Stars"></div>
-                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>5</span> -->
-                        </div>
-                        <div class="skills__name">
-                            <span class="skills__circle"></span> Git & GitHub
-                            <!-- <div class="skills__time-stars" title="5 Stars"></div>
-                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>5</span> -->
-                        </div>
-                        <div class="skills__name">
-                            <span class="skills__circle"></span> Powershell
-                            <!-- <div class="skills__time-stars" title="4 Stars"></div>
-                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>5</span> -->
-                        </div>
-
-                    </div>
-                    <a href="#" class="skills-button" id="skills-button">See More</a>
-                </section>
-
+                <span class="home__information">
+                  <i class="bx bx-phone home__icon"></i> (+506) 84047487
+                </span>
+                <a
+                  href="https://ealpizarp.github.io/portafolio-website/"
+                  target="_black"
+                  class="social__link"
+                >
+                  <span class="home__information home__information-terminal">
+                    <i class="bx bx-terminal home__icon"></i>
+                    Terminal Portafolio
+                  </span>
+                </a>
+              </div>
             </div>
 
-            <div class="resume__right">
-                <!--========== EXPERIENCE ==========-->
-                <section class="experience section" id="experience">
-                    <h2 class="section-title">Experience</h2>
+            <!-- Theme change button -->
+            <i
+              class="bx bx-moon change-theme"
+              title="Theme"
+              id="theme-button"
+            ></i>
 
-                    <div class="experience__container bd-grid">
-                        <div class="experience__content">
-                            <div class="experience__time">
-                                <span class="experience__rounder"></span>
-                                <span class="experience__line"></span>
-                            </div>
+            <!-- Button to generate and download the pdf. Available for desktop. -->
+            <i
+              class="bx bx-download generate-pdf"
+              title="Generate PDF"
+              id="resume-button"
+            ></i>
+          </section>
 
-                            <div class="experience__data bd-grid">
-                                <h3 class="experience__title">Project Engineering Intern</h3>
-                                <span class="experience__company">Sep 2018 - Nov 2018 | Emerson Automation Solutions
-                                    <a href="https://www.emerson.com/es-cr" target="_blank"><i
-                                            class="bx bx-link external-link"></i></a></span>
-                                <ul class="experience__list">
-                                    <li class="experience__description">
-                                        <span class="experience__circle"></span>
-                                        <div>Several activities including DCS programming (Delta V).
-                                        </div>
-                                    </li>
-                                </ul>
-                                <!-- <div class="experience__technologies">
-                                    <span>Technologies used</span>
-                                    <!-- <ul class="experience__technologies-list">
-                                        <li class="experience__technologies-item">React JS</li>
-                                        <li class="experience__technologies-item">Typescript</li>
-                                        <li class="experience__technologies-item">Bootstrap 4</li>
-                                        <li class="experience__technologies-item">Ant Design</li>
-                                        <li class="experience__technologies-item">Spring Boot (with JHipster)</li>
-                                        <li class="experience__technologies-item">PostgreSQL</li>
-                                    </ul> -->
-                                <!-- </div> -->
-                            </div>
-                        </div>
-                
+          <!--========== SOCIAL ==========-->
+          <section class="social section">
+            <h2 class="section-title">SOCIAL</h2>
 
-                    </div>
-                </section>
+            <div class="social__container bd-grid">
+              <a
+                href="https://www.linkedin.com/in/eric-alpizar-133567169/"
+                target="_black"
+                class="social__link"
+              >
+                <i class="bx bxl-linkedin-square social__icon"></i> @Eric
+                Alpizar
+              </a>
 
-                <section class="education section" id="education">
-                    <h2 class="section-title">Education</h2>
+              <a
+                href="https://github.com/ealpizarp"
+                target="_black"
+                class="social__link"
+              >
+                <i class="bx bxl-github social__icon"></i> @ealpizarp
+              </a>
 
-                    <div class="education__container bd-grid">
-                        <div class="education__content">
-                            <div class="education__time">
-                                <span class="education__rounder"></span>
-                                <span class="education__line"></span>
-                            </div>
+              <a
+                href="https://twitter.com/AlpizarEric"
+                target="_black"
+                class="social__link"
+              >
+                <i class="bx bxl-twitter social__icon"></i> @Eric Alpizar
+              </a>
 
-                            <div class="education__data bd-grid">
-                                <h3 class="education__title">Computer Science and Engineering</h3>
-                                <span class="education__studies">Costa Rica Institute of Technology
-                                </span>
- 
-                                <span class="education__year">2020 - 2023</span>
-                                <ul class="education__list">
-                                    <li class="education__description">
-                                        <span class="education__circle"></span>
-                                        <div>Honor student with a perfect 4.0 GPA (four point scale)</div>
-                                    </li>
-                                    <li class="education__description">
-                                        <span class="education__circle"></span>
-                                        <div>Conducted several computer science-related research.</div>
-                                    </li>
-                                    <li class="education__description">
-                                        <span class="education__circle"></span>
-                                        <div>Developed multiple software engineering projects.</div>
-                                    </li>
-                                </ul>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="education__content">
-                            <div class="education__time">
-                                <span class="education__rounder"></span>
-                                <span class="education__line"></span>
-                            </div>
-
-                            <div class="education__data bd-grid">
-                                <h3 class="education__title">Information Systems Engineering</h3>
-                                <span class="education__studies">National University - Costa Rica</span>
-                                <span class="education__year">2019 - 2020</span>
-                            </div>
-                        </div>
-                        
-                        <div class="education__content">
-                            <div class="education__time">
-                                <span class="education__rounder"></span>
-                                <span class="education__line"></span>
-                            </div>
-
-                            <div class="education__data bd-grid">
-                                <h3 class="education__title">Industrial Electronics Technician</h3>
-                                <span class="education__studies">Colegio Tecnico Profesional CIT</span>
-                                <span class="education__year">2015 - 2018</span>
-                            </div>
-                        </div>
-
-                    </div>
-                </section>
-
-                <!--========== CERTIFICATES ==========-->
-                <section class="certificate section" id="certificates">
-                    <h2 class="section-title">Certificates</h2>
-
-                    <div class="certificate__container bd-grid">
-                        <div class="certificate__content bd-grid">
-                            <h3 class="certificate__title">Scrum Fundamentals Certified
-                                <a href="https://c46e136a583f7e334124-ac22991740ab4ff17e21daf2ed577041.ssl.cf1.rackcdn.com/Certificate/ScrumFundamentalsCertified-EricAlpizar-837979.pdf" target="_blank"><i
-                                    class="bx bx-link external-link"></i></a>
-                            </h3>
-                            <span class="certificate__company">April 2021 | ScrumStudy</span>
-                            <p class="certificate__description">
-                                Basic knowledge required for the Scrum framework.</p>
-                            <h3 class="certificate__title">Oxford Test of English</h3>
-                            <span class="certificate__company">March 2023 | Oxford University</span>
-                            <p class="certificate__description">
-                                Certified in Oxford Test of English at B2 level, the highest achievable score.</p>
-                        </div>
-
-                    </div>
-                </section>
-
-                <!--========== REFERENCES ==========-->
-                <!-- <section class="references section" id="references">
-                    <h2 class="section-title">References</h2>
-
-                    <div class="references__container bd-grid">
-                        <div class="references__content bd-grid">
-                            <span class="references__subtitle">Sr. Director</span>
-                            <h3 class="references__title">Mr. Clay Doe</h3>
-                            <ul class="references__contact">
-                                <li>Phone: 999-777-666</li>
-                                <li>Email: user@email.com</li>
-                            </ul>
-                        </div>
-                        <div class="references__content bd-grid">
-                            <span class="references__subtitle">Mag. Developer</span>
-                            <h3 class="references__title">Mr. Clay Doe</h3>
-                            <ul class="references__contact">
-                                <li>Phone: 999-777-666</li>
-                                <li>Email: user@email.com</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section> -->
-
-                <!--========== LANGUAGES ==========-->
-                <section class="languages section">
-                    <h3 class="section-title">Languages</h3>
-
-                    <div class="languages__container">
-                        <ul class="languages__content">
-                            <li class="languages__name">
-                                <span class="languages__circle"></span> <b>Spanish</b>: Native proficiency
-                            </li>
-
-                            <li class="languages__name">
-                                <span class="languages__circle"></span> <b>English</b>: Full professional proficiency (C1)
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-
-                <section class="skills section hide" id="skills">
-                    <h2 class="section-title">Soft Skills</h2>
-
-                    <div class="skills__content-2 bd-grid">
-                        <div class="skills__name">
-                            Emotional intelligence
-                        </div>
-                        <div class="skills__name">
-                            Problem solving
-                        </div>
-                        <div class="skills__name">
-                             Teamwork
-                        </div>
-                        <div class="skills__name">
-                             Time management
-                        </div>
-                        <div class="skills__name">
-                            Personal accountability
-                        </div>
-                        <div class="skills__name">
-                            Adaptability
-                        </div>
-                </section>
+              <a
+                href="https://www.instagram.com/_ealpizarp/"
+                target="_black"
+                class="social__link"
+              >
+                <i class="bx bxl-instagram-alt social__icon"></i> @ealpizarp
+              </a>
             </div>
+          </section>
+
+          <!--========== PROFILE ==========-->
+          <section class="profile section" id="profile">
+            <h2 class="section-title">Profile</h2>
+
+            <p class="profile__description">
+              Ever since I was young, technology has been my driving force,
+              shaping my identity. Crafting exceptional software isn't just a
+              job for me; it's my daily purpose—a quest that fuels my
+              inspiration and fills me with immense fulfillment. Through my
+              work, I aim to create meaningful and transformative experiences
+              within the dynamic landscape of technology.
+            </p>
+          </section>
+
+          <!--========== EDUCATION ==========-->
+
+          <!--========== SKILLS  ==========-->
+          <section class="skills section hide" id="skills">
+            <h2 class="section-title">Technologies</h2>
+
+            <div class="skills__content bd-grid">
+              <div class="skills__name">
+                <span class="skills__circle"></span> Java
+                <!-- <div class="skills__time-stars" title="4 Stars"></div>
+                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>4</span> -->
+              </div>
+              <div class="skills__name">
+                <span class="skills__circle"></span> Python
+                <!-- <div class="skills__time-stars" title="4 Stars"></div>
+                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>4</span> -->
+              </div>
+              <div class="skills__name">
+                <span class="skills__circle"></span> C/C++
+                <!-- <div class="skills__time-stars" title="4 Stars"></div>
+                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>4</span> -->
+              </div>
+              <div class="skills__name">
+                <span class="skills__circle"></span> HTML
+                <!-- <div class="skills__time-stars" title="5 Stars"></div>
+                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>5</span> -->
+              </div>
+              <div class="skills__name">
+                <span class="skills__circle"></span> CSS
+                <!-- <div class="skills__time-stars" title="5 Stars"></div>
+                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>5</span> -->
+              </div>
+              <div class="skills__name">
+                <span class="skills__circle"></span> JavaScript
+                <!-- <div class="skills__time-stars" title="5 Stars"></div>
+                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>5</span> -->
+              </div>
+              <div class="skills__name">
+                <span class="skills__circle"></span> Typescript
+                <!-- <div class="skills__time-stars" title="4 Stars"></div>
+                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>4</span> -->
+              </div>
+              <div class="skills__name">
+                <span class="skills__circle"></span> PHP
+                <!-- <div class="skills__time-stars" title="3 Stars"></div>
+                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>4</span> -->
+              </div>
+              <div class="skills__name">
+                <span class="skills__circle"></span> SQL
+                <!-- <div class="skills__time-stars" title="4 Stars"></div>
+                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>4</span> -->
+              </div>
+              <div class="skills__name">
+                <span class="skills__circle"></span> Node JS
+                <!-- <div class="skills__time-stars" title="4 Stars"></div>
+                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>4</span> -->
+              </div>
+              <div class="skills__name">
+                <span class="skills__circle"></span> Frontend Frameworks &
+                Libraries
+                <!-- <div class="skills__time-stars" title="3 Stars"></div>
+                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>3</span> -->
+              </div>
+              <div class="skills__name">
+                <span class="skills__circle"></span> Non-relational DBs
+                <!-- <div class="skills__time-stars" title="3 Stars"></div>
+                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>3</span> -->
+              </div>
+              <div class="skills__name">
+                <span class="skills__circle"></span> AWS Services
+                <!-- <div class="skills__time-stars" title="3 Stars"></div>
+                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>3</span> -->
+              </div>
+              <div class="skills__name">
+                <span class="skills__circle"></span> Linux & Shell
+                <!-- <div class="skills__time-stars" title="5 Stars"></div>
+                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>5</span> -->
+              </div>
+              <div class="skills__name">
+                <span class="skills__circle"></span> Git & GitHub
+                <!-- <div class="skills__time-stars" title="5 Stars"></div>
+                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>5</span> -->
+              </div>
+              <div class="skills__name">
+                <span class="skills__circle"></span> Powershell
+                <!-- <div class="skills__time-stars" title="4 Stars"></div>
+                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>5</span> -->
+              </div>
+            </div>
+            <a href="#" class="skills-button" id="skills-button">See More</a>
+          </section>
         </div>
+
+        <div class="resume__right">
+          <!--========== EXPERIENCE ==========-->
+          <section class="experience section" id="experience">
+            <h2 class="section-title">Experience</h2>
+
+            <div class="experience__container bd-grid">
+              <div class="experience__content">
+                <div class="experience__time">
+                  <span class="experience__rounder"></span>
+                  <span class="experience__line"></span>
+                </div>
+
+                <div class="experience__data bd-grid">
+                  <h3 class="experience__title">Project Engineering Intern</h3>
+                  <span class="experience__company"
+                    >Sep 2018 - Nov 2018 | Emerson Automation Solutions
+                    <a href="https://www.emerson.com/en-us" target="_blank"
+                      ><i class="bx bx-link external-link"></i></a
+                  ></span>
+                  <ul class="experience__list">
+                    <li class="experience__description">
+                      <span class="experience__circle"></span>
+                      <div>DCS programming (Delta V).</div>
+                    </li>
+                  </ul>
+                  <div class="experience__technologies">
+                    <span>Technologies used</span>
+                    <ul class="experience__technologies-list">
+                      <li class="experience__technologies-item">
+                        Digital Automation Systems
+                      </li>
+                      <li class="experience__technologies-item">
+                        Electronic Design Automation
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="experience__content">
+                <div class="experience__time">
+                  <span class="experience__rounder"></span>
+                  <span class="experience__line"></span>
+                </div>
+
+                <div class="experience__data bd-grid">
+                  <h3 class="experience__title">Software Developer Intern</h3>
+                  <span class="experience__company"
+                    >Jul 2023 - Present | Konrad Group
+                    <a href="https://www.konrad.com/" target="_blank">
+                      <i class="bx bx-link external-link"></i>
+                    </a>
+                  </span>
+                  <ul class="experience__list">
+                    <li class="experience__description">
+                      <span class="experience__circle"></span>
+                      <div>Full Stack development</div>
+                    </li>
+                  </ul>
+                  <div class="experience__technologies">
+                    <span>Technologies used</span>
+                    <ul class="experience__technologies-list">
+                      <li class="experience__technologies-item">React</li>
+                      <li class="experience__technologies-item">Typescript</li>
+                      <li class="experience__technologies-item">Figma</li>
+                      <li class="experience__technologies-item">SCSS</li>
+                      <li class="experience__technologies-item">SpringBoot</li>
+                      <li class="experience__technologies-item">PostgreSQL</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="education section" id="education">
+            <h2 class="section-title">Education</h2>
+
+            <div class="education__container bd-grid">
+              <div class="education__content">
+                <div class="education__time">
+                  <span class="education__rounder"></span>
+                  <span class="education__line"></span>
+                </div>
+
+                <div class="education__data bd-grid">
+                  <h3 class="education__title">
+                    Computer Science and Engineering
+                  </h3>
+                  <span class="education__studies"
+                    >Costa Rica Institute of Technology
+                  </span>
+
+                  <span class="education__year">2020 - 2023</span>
+                  <ul class="education__list">
+                    <li class="education__description">
+                      <span class="education__circle"></span>
+                      <div>
+                        Honor student with a perfect 4.0 GPA (four point scale)
+                      </div>
+                    </li>
+                    <li class="education__description">
+                      <span class="education__circle"></span>
+                      <div>
+                        Conducted several computer science-related research.
+                      </div>
+                    </li>
+                    <li class="education__description">
+                      <span class="education__circle"></span>
+                      <div>
+                        Developed multiple software engineering projects.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="education__content">
+                <div class="education__time">
+                  <span class="education__rounder"></span>
+                  <span class="education__line"></span>
+                </div>
+
+                <div class="education__data bd-grid">
+                  <h3 class="education__title">
+                    Information Systems Engineering
+                  </h3>
+                  <span class="education__studies"
+                    >National University - Costa Rica</span
+                  >
+                  <span class="education__year">2019 - 2020</span>
+                </div>
+              </div>
+
+              <div class="education__content">
+                <div class="education__time">
+                  <span class="education__rounder"></span>
+                  <span class="education__line"></span>
+                </div>
+
+                <div class="education__data bd-grid">
+                  <h3 class="education__title">
+                    Industrial Electronics Technician
+                  </h3>
+                  <span class="education__studies"
+                    >Colegio Tecnico Profesional CIT</span
+                  >
+                  <span class="education__year">2015 - 2018</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!--========== CERTIFICATES ==========-->
+          <section class="certificate section" id="certificates">
+            <h2 class="section-title">Certificates</h2>
+
+            <div class="certificate__container bd-grid">
+              <div class="certificate__content bd-grid">
+                <h3 class="certificate__title">
+                  Scrum Fundamentals Certified
+                  <a
+                    href="https://c46e136a583f7e334124-ac22991740ab4ff17e21daf2ed577041.ssl.cf1.rackcdn.com/Certificate/ScrumFundamentalsCertified-EricAlpizar-837979.pdf"
+                    target="_blank"
+                    ><i class="bx bx-link external-link"></i
+                  ></a>
+                </h3>
+                <span class="certificate__company"
+                  >April 2021 | ScrumStudy</span
+                >
+                <p class="certificate__description">
+                  Basic knowledge required for the Scrum framework.
+                </p>
+                <h3 class="certificate__title">Oxford Test of English</h3>
+                <span class="certificate__company"
+                  >March 2023 | Oxford University</span
+                >
+                <p class="certificate__description">
+                  Certified in Oxford Test of English at B2 level, the highest
+                  achievable score.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!--========== LANGUAGES ==========-->
+          <section class="languages section">
+            <h3 class="section-title">Languages</h3>
+
+            <div class="languages__container">
+              <ul class="languages__content">
+                <li class="languages__name">
+                  <span class="languages__circle"></span> <b>Spanish</b>: Native
+                  proficiency
+                </li>
+
+                <li class="languages__name">
+                  <span class="languages__circle"></span> <b>English</b>: Full
+                  professional proficiency (C1)
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="skills section hide" id="skills">
+            <h2 class="section-title">Soft Skills</h2>
+
+            <div class="skills__content-2 bd-grid">
+              <div class="skills__name">Emotional intelligence</div>
+              <div class="skills__name">Problem solving</div>
+              <div class="skills__name">Teamwork</div>
+              <div class="skills__name">Time management</div>
+              <div class="skills__name">Personal accountability</div>
+              <div class="skills__name">Adaptability</div>
+            </div>
+          </section>
+        </div>
+      </div>
     </main>
 
     <!--========== SCROLL TOP ==========-->
     <a href="#" class="scrolltop" id="scroll-top">
-        <i class='bx bx-up-arrow-alt scrollttop__icon'></i>
+      <i class="bx bx-up-arrow-alt scrollttop__icon"></i>
     </a>
 
     <!--========== HTML2PDF ==========-->
@@ -457,6 +518,5 @@
 
     <!--========== MAIN JS ==========-->
     <script src="assets/js/main.js"></script>
-</body>
-
+  </body>
 </html>
