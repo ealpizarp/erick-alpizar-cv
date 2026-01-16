@@ -13,7 +13,16 @@
     <!--========== CSS ==========-->
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <title>Eric Alpízar</title>
+    <meta
+      name="description"
+      content="Erick Alpízar - Software Developer - Full Stack Developer with expertise in React, TypeScript, Java, Azure, and cloud technologies"
+    />
+    <meta name="author" content="Erick Alpízar" />
+    <meta
+      name="keywords"
+      content="Software Developer, Full Stack Developer, React, TypeScript, Java, Azure, JavaScript, Node.js, Software Engineer, Web Developer"
+    />
+    <title>Erick Alpízar - Software Developer Resume</title>
   </head>
 
   <body>
@@ -62,15 +71,26 @@
           </ul>
         </div>
 
-        <div class="nav__toggle" id="nav-toggle">
+        <button
+          class="nav__toggle"
+          id="nav-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
           <i class="bx bx-grid-alt"></i>
-        </div>
+        </button>
       </nav>
     </header>
 
     <main class="l-main bd-container">
       <!-- All elements within this div, is generated in PDF -->
-      <div class="resume" id="area-cv">
+      <div
+        class="resume"
+        id="area-cv"
+        role="document"
+        itemscope
+        itemtype="https://schema.org/Person"
+      >
         <div class="resume__left">
           <!--========== HOME ==========-->
           <section class="home" id="home">
@@ -78,17 +98,19 @@
               <div class="home__data bd-grid">
                 <img
                   src="assets/img/profile_photo_main.JPG"
-                  alt=""
+                  alt="Erick Alpízar - Software Developer II"
                   class="home__img"
                 />
 
-                <h1 class="home__title">ERICK <b>ALPÍZAR</b></h1>
+                <h1 class="home__title" itemprop="name">
+                  ERICK <b>ALPÍZAR</b>
+                </h1>
 
-                <h3 class="home__profession">
-                  Computer Science and Engineering Student
+                <h3 class="home__profession" itemprop="jobTitle">
+                  Software Developer
                 </h3>
 
-                <!-- Button to download yout CV saved in the pdf folder. Available for mobile -->
+                <!-- Button to download your CV saved in the pdf folder. Available for mobile -->
                 <div>
                   <a
                     download=""
@@ -113,42 +135,57 @@
                 <span class="home__information">
                   <i class="bx bx-phone home__icon"></i> (+506) 84047487
                 </span>
-                <a
+                <!-- <a
                   href="https://ealpizarp.github.io/portafolio-website/"
-                  target="_black"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   class="social__link"
                 >
                   <span class="home__information home__information-terminal">
                     <i class="bx bx-terminal home__icon"></i>
                     Terminal Portafolio
                   </span>
+                </a> -->
+                <a
+                  href="https://ealpizarp.github.io/erick-alpizar-cv/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social__link"
+                >
+                  <span class="home__information home__information-cv-print">
+                    <i class="bx bx-globe home__icon"></i>
+                    Website CV
+                  </span>
                 </a>
               </div>
             </div>
 
             <!-- Theme change button -->
-            <i
+            <button
               class="bx bx-moon change-theme"
-              title="Theme"
+              title="Toggle theme"
               id="theme-button"
-            ></i>
+              aria-label="Toggle dark/light theme"
+            ></button>
 
             <!-- Button to generate and download the pdf. Available for desktop. -->
-            <i
+            <button
               class="bx bx-download generate-pdf"
               title="Generate PDF"
               id="resume-button"
-            ></i>
+              aria-label="Generate and download PDF resume"
+            ></button>
           </section>
 
           <!--========== SOCIAL ==========-->
           <section class="social section">
-            <h2 class="section-title">SOCIAL</h2>
+            <h2 class="section-title">Contact Information</h2>
 
             <div class="social__container bd-grid">
               <a
                 href="https://www.linkedin.com/in/eric-alpizar-133567169/"
-                target="_black"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="social__link"
               >
                 <i class="bx bxl-linkedin-square social__icon"></i> @Eric
@@ -157,7 +194,8 @@
 
               <a
                 href="https://github.com/ealpizarp"
-                target="_black"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="social__link"
               >
                 <i class="bx bxl-github social__icon"></i> @ealpizarp
@@ -165,7 +203,8 @@
 
               <a
                 href="https://twitter.com/AlpizarEric"
-                target="_black"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="social__link"
               >
                 <i class="bx bxl-twitter social__icon"></i> @Eric Alpizar
@@ -173,8 +212,9 @@
 
               <a
                 href="https://www.instagram.com/_ealpizarp/"
-                target="_black"
-                class="social__link"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social__link social__link-instagram"
               >
                 <i class="bx bxl-instagram-alt social__icon"></i> @ealpizarp
               </a>
@@ -183,23 +223,28 @@
 
           <!--========== PROFILE ==========-->
           <section class="profile section" id="profile">
-            <h2 class="section-title">Profile</h2>
+            <h2 class="section-title">Summary</h2>
 
             <p class="profile__description">
-              Ever since I was young, technology has been my driving force,
-              shaping my identity. Crafting exceptional software isn't just a
-              job for me; it's my daily purpose—a quest that fuels my
-              inspiration and fills me with immense fulfillment. Through my
-              work, I aim to create meaningful and transformative experiences
-              within the dynamic landscape of technology.
+              I've been developing software for over a decade, starting when I
+              was a teenager, my passion for technology has always been a
+              characteristic of my personality. The process of solving complex
+              problems and building solutions that make a real difference is
+              fascinating to me. I'm committed to keep learning and improving my
+              skills, exploring new technologies, refining my approach to
+              software architecture, and understanding user needs to create
+              intuitive applications. I believe, as Robert C. Martin (Uncle Bob)
+              advocates, that well-crafted software should function like a
+              well-designed tool—reliable, efficient, and purpose-built to solve
+              real problems without unnecessary complexity.
             </p>
           </section>
 
           <!--========== EDUCATION ==========-->
 
           <!--========== SKILLS  ==========-->
-          <section class="skills section hide" id="skills">
-            <h2 class="section-title">Technologies</h2>
+          <section class="skills section show" id="skills">
+            <h2 class="section-title">Technical Skills</h2>
 
             <div class="skills__content bd-grid">
               <div class="skills__name">
@@ -223,12 +268,17 @@
                             <span class="skills__stars"><i class='bx bxs-star star__icon'></i>3</span> -->
               </div>
               <div class="skills__name">
+                <span class="skills__circle"></span> Tailwind
+                <!-- <div class="skills__time-stars" title="5 Stars"></div>
+                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>5</span> -->
+              </div>
+              <div class="skills__name">
                 <span class="skills__circle"></span> JavaScript
                 <!-- <div class="skills__time-stars" title="5 Stars"></div>
                             <span class="skills__stars"><i class='bx bxs-star star__icon'></i>5</span> -->
               </div>
               <div class="skills__name">
-                <span class="skills__circle"></span> Typescript
+                <span class="skills__circle"></span> TypeScript
                 <!-- <div class="skills__time-stars" title="4 Stars"></div>
                             <span class="skills__stars"><i class='bx bxs-star star__icon'></i>4</span> -->
               </div>
@@ -278,6 +328,16 @@
                             <span class="skills__stars"><i class='bx bxs-star star__icon'></i>3</span> -->
               </div>
               <div class="skills__name">
+                <span class="skills__circle"></span> Redux and Redux Toolkit
+                <!-- <div class="skills__time-stars" title="5 Stars"></div>
+                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>5</span> -->
+              </div>
+              <div class="skills__name">
+                <span class="skills__circle"></span> MuleSoft
+                <!-- <div class="skills__time-stars" title="5 Stars"></div>
+                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>5</span> -->
+              </div>
+              <div class="skills__name">
                 <span class="skills__circle"></span> Linux & Shell
                 <!-- <div class="skills__time-stars" title="5 Stars"></div>
                             <span class="skills__stars"><i class='bx bxs-star star__icon'></i>5</span> -->
@@ -287,8 +347,22 @@
                 <!-- <div class="skills__time-stars" title="5 Stars"></div>
                             <span class="skills__stars"><i class='bx bxs-star star__icon'></i>5</span> -->
               </div>
+              <div class="skills__name">
+                <span class="skills__circle"></span> Next.js
+                <!-- <div class="skills__time-stars" title="5 Stars"></div>
+                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>5</span> -->
+              </div>
+              <div class="skills__name">
+                <span class="skills__circle"></span> Databricks
+                <!-- <div class="skills__time-stars" title="5 Stars"></div>
+                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>5</span> -->
+              </div>
+              <div class="skills__name">
+                <span class="skills__circle"></span> Angular
+                <!-- <div class="skills__time-stars" title="5 Stars"></div>
+                            <span class="skills__stars"><i class='bx bxs-star star__icon'></i>5</span> -->
+              </div>
             </div>
-            <a href="#" class="skills-button" id="skills-button">See More</a>
           </section>
         </div>
 
@@ -308,18 +382,39 @@
                   <h3 class="experience__title">Project Engineering Intern</h3>
                   <span class="experience__company"
                     >Sep 2018 - Nov 2018 | Emerson Automation Solutions
-                    <a href="https://www.emerson.com/en-us" target="_blank"
+                    <a
+                      href="https://www.emerson.com/en-us"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       ><i class="bx bx-link external-link"></i></a
                   ></span>
                   <ul class="experience__list">
                     <li class="experience__description">
                       <span class="experience__circle"></span>
-                      <div>DCS programming (Delta V).</div>
+                      <div>
+                        Learned and implemented DCS programming using Emerson's
+                        Delta V system, developing automation solutions for
+                        industrial processes.
+                      </div>
+                    </li>
+                    <li class="experience__description">
+                      <span class="experience__circle"></span>
+                      <div>
+                        Gained hands-on experience with digital automation
+                        systems and electronic design automation tools,
+                        contributing to project deliverables.
+                      </div>
                     </li>
                   </ul>
                   <div class="experience__technologies">
                     <span>Technologies used</span>
                     <ul class="experience__technologies-list">
+                      <li class="experience__technologies-item">
+                        Emerson Delta V
+                      </li>
+                      <li class="experience__technologies-item">
+                        DCS Programming
+                      </li>
                       <li class="experience__technologies-item">
                         Digital Automation Systems
                       </li>
@@ -341,7 +436,11 @@
                   <h3 class="experience__title">Software Developer Intern</h3>
                   <span class="experience__company"
                     >Jul 2023 - Dec 2023 | Konrad Group
-                    <a href="https://www.konrad.com/" target="_blank">
+                    <a
+                      href="https://www.konrad.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <i class="bx bx-link external-link"></i>
                     </a>
                   </span>
@@ -349,9 +448,25 @@
                     <li class="experience__description">
                       <span class="experience__circle"></span>
                       <div>
-                        Collaborated within a Scrum team to deliver an internal
-                        charity auction website, ensuring timely completion of
-                        project milestones.
+                        Delivered an internal charity auction website within a
+                        Scrum team, completing all project milestones on
+                        schedule using React, TypeScript, and Spring Boot.
+                      </div>
+                    </li>
+                    <li class="experience__description">
+                      <span class="experience__circle"></span>
+                      <div>
+                        Demonstrated leadership by taking ownership of key
+                        features, coordinating with team members, and
+                        contributing to technical decision-making processes.
+                      </div>
+                    </li>
+                    <li class="experience__description">
+                      <span class="experience__circle"></span>
+                      <div>
+                        Implemented real-time functionality using WebSockets,
+                        enabling live bidding updates and synchronized auction
+                        events across multiple client connections.
                       </div>
                     </li>
                   </ul>
@@ -359,10 +474,11 @@
                     <span>Technologies used</span>
                     <ul class="experience__technologies-list">
                       <li class="experience__technologies-item">React</li>
-                      <li class="experience__technologies-item">Typescript</li>
+                      <li class="experience__technologies-item">TypeScript</li>
+                      <li class="experience__technologies-item">WebSockets</li>
                       <li class="experience__technologies-item">Figma</li>
                       <li class="experience__technologies-item">SCSS</li>
-                      <li class="experience__technologies-item">SpringBoot</li>
+                      <li class="experience__technologies-item">Spring Boot</li>
                       <li class="experience__technologies-item">PostgreSQL</li>
                     </ul>
                   </div>
@@ -380,8 +496,12 @@
                     Associate Software Developer
                   </h3>
                   <span class="experience__company"
-                    >Dec 2023 - Present | Konrad Group
-                    <a href="https://www.konrad.com/" target="_blank">
+                    >Dec 2023 - Dec 2024 | Konrad Group
+                    <a
+                      href="https://www.konrad.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <i class="bx bx-link external-link"></i>
                     </a>
                   </span>
@@ -389,9 +509,38 @@
                     <li class="experience__description">
                       <span class="experience__circle"></span>
                       <div>
-                        Worked on diverse projects in a dynamic digital
-                        consultancy environment, delivering solutions to meet
-                        client needs.
+                        <strong>IHS/DIM Expansion:</strong>
+                        Developed Identity Health Scan (IHS) and Digital
+                        Identity Manager (DIM) React components for Experian's
+                        pre-built component library, enabling users to monitor
+                        and manage personal information exposure. Integrated
+                        with design tokens, Storybook documentation, and
+                        multi-tenant theming for partner customization.
+                      </div>
+                    </li>
+                    <li class="experience__description">
+                      <span class="experience__circle"></span>
+                      <div>
+                        <strong
+                          >American Express - MCG & Credit Secure
+                          Enhancements:</strong
+                        >
+                        Enhanced American Express credit products (My Credit
+                        Guide & Credit Secure) with upsell flows, personalized
+                        offers, and A/B testing via Split.io. Implemented
+                        Contentstack headless CMS for dynamic content and
+                        achieved WCAG 2.1 AAA accessibility compliance.
+                      </div>
+                    </li>
+                    <li class="experience__description">
+                      <span class="experience__circle"></span>
+                      <div>
+                        <strong>SMS Platform Architecture:</strong>
+                        Architected scalable React component library with design
+                        system integration, reducing partner onboarding time.
+                        Designed Experience API (XAPI) abstraction layer on
+                        MuleSoft, unifying responses from multiple Experian APIs
+                        and streamlining integration workflows.
                       </div>
                     </li>
                   </ul>
@@ -399,10 +548,75 @@
                     <span>Some technologies used</span>
                     <ul class="experience__technologies-list">
                       <li class="experience__technologies-item">React</li>
-                      <li class="experience__technologies-item">Typescript</li>
-                      <li class="experience__technologies-item">NextJS</li>
+                      <li class="experience__technologies-item">TypeScript</li>
+                      <li class="experience__technologies-item">Next.js</li>
                       <li class="experience__technologies-item">Java</li>
-                      <li class="experience__technologies-item">Spring</li>
+                      <li class="experience__technologies-item">Spring Boot</li>
+                      <li class="experience__technologies-item">MuleSoft</li>
+                      <li class="experience__technologies-item">
+                        Contentstack
+                      </li>
+                      <li class="experience__technologies-item">Storybook</li>
+                      <li class="experience__technologies-item">SCSS</li>
+                      <li class="experience__technologies-item">Azure</li>
+                      <li class="experience__technologies-item">PostgreSQL</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="experience__content">
+                <div class="experience__time">
+                  <span class="experience__rounder"></span>
+                  <span class="experience__line"></span>
+                </div>
+
+                <div class="experience__data bd-grid">
+                  <h3 class="experience__title">Software Developer</h3>
+                  <span class="experience__company"
+                    >Dec 2024 - Present | Konrad Group
+                    <a
+                      href="https://www.konrad.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i class="bx bx-link external-link"></i>
+                    </a>
+                  </span>
+                  <ul class="experience__list">
+                    <li class="experience__description">
+                      <span class="experience__circle"></span>
+                      <div>
+                        <strong>Biltmore Estate:</strong>
+                        Led backend development for booking platform
+                        transformation using Next.js, implementing complete
+                        booking flows (visitor selection, availability,
+                        ticketing) that support complex reservation logic across
+                        multiple experience types.
+                      </div>
+                    </li>
+                    <li class="experience__description">
+                      <span class="experience__circle"></span>
+                      <div>
+                        <strong>BDO Global:</strong>
+                        Architected component library foundation for BDO Global,
+                        establishing Design Token System and technical
+                        specifications. Delivered Angular POC with Storybook
+                        integration, validating design-to-development workflow
+                        and reducing implementation ambiguity.
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="experience__technologies">
+                    <span>Some technologies used</span>
+                    <ul class="experience__technologies-list">
+                      <li class="experience__technologies-item">React</li>
+                      <li class="experience__technologies-item">TypeScript</li>
+                      <li class="experience__technologies-item">Next.js</li>
+                      <li class="experience__technologies-item">Angular</li>
+                      <li class="experience__technologies-item">Storybook</li>
+                      <li class="experience__technologies-item">Java</li>
+                      <li class="experience__technologies-item">Spring Boot</li>
                       <li class="experience__technologies-item">SCSS</li>
                       <li class="experience__technologies-item">Azure</li>
                       <li class="experience__technologies-item">PostgreSQL</li>
@@ -442,7 +656,15 @@
                     <li class="education__description">
                       <span class="education__circle"></span>
                       <div>
-                        Conducted several computer science-related research.
+                        Academic excellence throughout the entire program
+                      </div>
+                    </li>
+                    <li class="education__description">
+                      <span class="education__circle"></span>
+                      <div>
+                        Conducted multiple computer science research projects
+                        contributing to academic publications and technical
+                        knowledge advancement.
                       </div>
                     </li>
                   </ul>
@@ -492,24 +714,41 @@
             <div class="certificate__container bd-grid">
               <div class="certificate__content bd-grid">
                 <h3 class="certificate__title">
-                  Scrum Fundamentals Certified
+                  Microsoft Certified: DevOps Engineer Expert
                   <a
-                    href="https://c46e136a583f7e334124-ac22991740ab4ff17e21daf2ed577041.ssl.cf1.rackcdn.com/Certificate/ScrumFundamentalsCertified-EricAlpizar-837979.pdf"
+                    href="https://learn.microsoft.com/api/credentials/share/en-us/ErickAlpizar-2052/1CC7587DA641D4BF?sharingId=F100F46B29379B21"
                     target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="bx bx-link external-link"></i
+                  ></a>
+                </h3>
+                <span class="certificate__company">July 2025 | Microsoft</span>
+                <p class="certificate__description">
+                  Expert-level certification in DevOps engineering practices and
+                  Azure DevOps solutions.
+                </p>
+                <h3 class="certificate__title">
+                  Microsoft Certified: Azure Developer Associate
+                  <a
+                    href="https://learn.microsoft.com/api/credentials/share/en-us/ErickAlpizar-2052/DBE85A19401E2202?sharingId=F100F46B29379B21"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     ><i class="bx bx-link external-link"></i
                   ></a>
                 </h3>
                 <span class="certificate__company"
-                  >April 2021 | ScrumStudy</span
+                  >September 2024 | Microsoft</span
                 >
                 <p class="certificate__description">
-                  Basic knowledge required for the Scrum framework.
+                  Associate-level certification demonstrating expertise in
+                  developing and deploying Azure cloud solutions.
                 </p>
                 <h3 class="certificate__title">
                   Azure Fundamentals
                   <a
                     href="https://learn.microsoft.com/api/credentials/share/en-us/ErickAlpizar-2052/39E07A4D8E80D1F1?sharingId=F100F46B29379B21"
                     target="_blank"
+                    rel="noopener noreferrer"
                     ><i class="bx bx-link external-link"></i
                   ></a>
                 </h3>
@@ -526,6 +765,21 @@
                 <p class="certificate__description">
                   Certified in Oxford Test of English at B2 level, the highest
                   achievable score.
+                </p>
+                <h3 class="certificate__title">
+                  Scrum Fundamentals Certified
+                  <a
+                    href="https://c46e136a583f7e334124-ac22991740ab4ff17e21daf2ed577041.ssl.cf1.rackcdn.com/Certificate/ScrumFundamentalsCertified-EricAlpizar-837979.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="bx bx-link external-link"></i
+                  ></a>
+                </h3>
+                <span class="certificate__company"
+                  >April 2021 | ScrumStudy</span
+                >
+                <p class="certificate__description">
+                  Basic knowledge required for the Scrum framework.
                 </p>
               </div>
             </div>
@@ -550,7 +804,7 @@
             </div>
           </section>
 
-          <section class="skills section hide" id="skills">
+          <section class="skills section hide" id="soft-skills">
             <h2 class="section-title">Soft Skills</h2>
 
             <div class="skills__content-2 bd-grid">
@@ -568,7 +822,7 @@
 
     <!--========== SCROLL TOP ==========-->
     <a href="#" class="scrolltop" id="scroll-top">
-      <i class="bx bx-up-arrow-alt scrollttop__icon"></i>
+      <i class="bx bx-up-arrow-alt scrolltop__icon"></i>
     </a>
 
     <!--========== HTML2PDF ==========-->

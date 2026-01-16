@@ -1,152 +1,233 @@
-/*==================== SHOW MENU ====================*/
-const showMenu = (toggleId, navId) => {
-    const toggle = document.getElementById(toggleId),
-        nav = document.getElementById(navId)
+(() => {
+  const SELECTORS = {
+    navToggle: "#nav-toggle",
+    navMenu: "#nav-menu",
+    navLink: ".nav__link",
+    sectionWithId: "section[id]",
+    scrollTop: "#scroll-top",
+    themeButton: "#theme-button",
+    skillsButton: "#skills-button",
+    skillsSection: "#skills",
+    skillsItems: ".skills__name.showmore",
+    resumeButton: "#resume-button",
+    resumeArea: "#area-cv",
+  };
 
-    // Validate that variables exist
-    if (toggle && nav) {
-        toggle.addEventListener('click', () => {
-            // We add the show-menu class to the div tag with the nav__menu class
-            nav.classList.toggle('show-menu')
-        })
-    }
-}
-showMenu('nav-toggle', 'nav-menu')
+  const CLASS_NAMES = {
+    showMenu: "show-menu",
+    activeLink: "active-link",
+    showScroll: "show-scroll",
+    darkTheme: "dark-theme",
+    iconTheme: "bx-sun",
+    show: "show",
+    hide: "hide",
+    scaleCv: "scale-cv",
+  };
 
-/*==================== REMOVE MENU MOBILE ====================*/
-const navLink = document.querySelectorAll('.nav__link')
+  const STORAGE_KEYS = {
+    theme: "selected-theme",
+    icon: "selected-icon",
+  };
 
-function linkAction() {
-    const navMenu = document.getElementById('nav-menu')
-    // When we click on each nav__link, we remove the show-menu class
-    navMenu.classList.remove('show-menu')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
+  const TEXT = {
+    seeMore: "See More",
+    seeLess: "See Less",
+  };
 
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-const sections = document.querySelectorAll('section[id]')
-
-function scrollActive() {
-    const scrollY = window.pageYOffset
-
-    sections.forEach(current => {
-        const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id')
-
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-        } else {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
-        }
-    })
-}
-window.addEventListener('scroll', scrollActive)
-
-/*==================== SHOW SCROLL TOP ====================*/
-function scrollTop() {
-    const scrollTop = document.getElementById('scroll-top');
-    // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
-    if (this.scrollY >= 200) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollTop)
-
-/*==================== DARK LIGHT THEME ====================*/
-const themeButton = document.getElementById('theme-button')
-const darkTheme = 'dark-theme'
-const iconTheme = 'bx-sun'
-
-// Previously selected topic (if user selected)
-const selectedTheme = localStorage.getItem('selected-theme')
-const selectedIcon = localStorage.getItem('selected-icon')
-
-// We obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx-moon' : 'bx-sun'
-
-// We validate if the user previously chose a topic
-if (selectedTheme) {
-    // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-    themeButton.classList[selectedIcon === 'bx-moon' ? 'add' : 'remove'](iconTheme)
-}
-
-// Activate / deactivate the theme manually with the button
-themeButton.addEventListener('click', () => {
-    // Add or remove the dark / icon theme
-    document.body.classList.toggle(darkTheme)
-    themeButton.classList.toggle(iconTheme)
-    // We save the theme and the current icon that the user chose
-    localStorage.setItem('selected-theme', getCurrentTheme())
-    localStorage.setItem('selected-icon', getCurrentIcon())
-})
-
-/*==================== SEE MORE ====================*/
-// Skills
-const skillsButton = document.getElementById('skills-button')
-const skillsSection = document.getElementById('skills');
-const skillsItems = document.querySelectorAll('.skills__name.showmore');
-
-skillsButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    if (skillsSection.classList.contains("show"))
-        skillsButton.innerText = "See More"
-    else skillsButton.innerText = "See Less"
-    skillsSection.classList.toggle('show');
-    skillsSection.classList.toggle('hide');
-    skillsItems.forEach(item => {
-        item.classList.toggle('hide')
-        item.classList.toggle('show')
-    })
-})
-
-//Education Awards
-// const educationAwardButton = document.getElementById('icpc__award-button')
-// const educationAward = document.getElementById('icpc__award');
-
-// educationAwardButton.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     if (educationAwardButton.innerText == "See More") {
-//         educationAward.classList.add('show');
-//         educationAwardButton.innerText = "See Less"
-//     } else {
-//         educationAward.classList.remove('show');
-//         educationAwardButton.innerText = "See More"
-//     }
-// })
-
-/*==================== REDUCE THE SIZE AND PRINT ON AN A4 SHEET ====================*/
-function scaleCv() {
-    document.body.classList.add('scale-cv')
-}
-
-/*==================== REMOVE THE SIZE WHEN THE CV IS DOWNLOADED ====================*/
-function removeScale() {
-    document.body.classList.remove('scale-cv')
-}
-
-/*==================== GENERATE PDF ====================*/
-// PDF generated area
-let areaCv = document.getElementById('area-cv')
-let resumeButton = document.getElementById('resume-button')
-
-// Html2pdf options
-let opt = {
+  const PDF_OPTIONS = {
     margin: 1,
-    filename: 'Curriculum Erick Alpizar',
-    image: { type: 'jpeg', quality: 0.98 },
+    filename: "Curriculum Erick Alpizar",
+    image: { type: "jpeg", quality: 0.98 },
     html2canvas: { scale: 4 },
-    jsPDF: { format: 'a4', orientation: 'portrait' }
-}
+    jsPDF: { format: "a4", orientation: "portrait" },
+  };
 
-// Function to call areaCv and Html2Pdf options 
-function generateResume() {
-    html2pdf().set(opt).from(areaCv).save();
-}
+  const qs = (selector, scope = document) => scope.querySelector(selector);
+  const qsa = (selector, scope = document) =>
+    Array.from(scope.querySelectorAll(selector));
+  const on = (element, event, handler) => {
+    if (element) {
+      element.addEventListener(event, handler);
+    }
+  };
 
-// When the button is clicked, it executes the three functions
-resumeButton.addEventListener('click', () => {
-    scaleCv()
-    setTimeout(generateResume, 2500)
-    setTimeout(removeScale, 2500)
-})
+  /*==================== SHOW MENU ====================*/
+  const initMenuToggle = () => {
+    const toggle = qs(SELECTORS.navToggle);
+    const nav = qs(SELECTORS.navMenu);
+
+    if (!toggle || !nav) {
+      return;
+    }
+
+    on(toggle, "click", () => {
+      const isExpanded = nav.classList.contains(CLASS_NAMES.showMenu);
+      nav.classList.toggle(CLASS_NAMES.showMenu);
+      toggle.setAttribute("aria-expanded", !isExpanded);
+    });
+  };
+
+  /*==================== REMOVE MENU MOBILE ====================*/
+  const initMobileMenuClose = () => {
+    const navLinks = qsa(SELECTORS.navLink);
+    const navMenu = qs(SELECTORS.navMenu);
+
+    if (!navMenu) {
+      return;
+    }
+
+    navLinks.forEach((link) => {
+      on(link, "click", () => {
+        navMenu.classList.remove(CLASS_NAMES.showMenu);
+      });
+    });
+  };
+
+  /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+  const initScrollActive = () => {
+    const sections = qsa(SELECTORS.sectionWithId);
+
+    const onScroll = () => {
+      const scrollY = window.scrollY;
+
+      sections.forEach((section) => {
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 50;
+        const sectionId = section.getAttribute("id");
+        const link = qs(`${SELECTORS.navMenu} a[href*="${sectionId}"]`);
+
+        if (!link) {
+          return;
+        }
+
+        const isActive =
+          scrollY > sectionTop && scrollY <= sectionTop + sectionHeight;
+        link.classList.toggle(CLASS_NAMES.activeLink, isActive);
+      });
+    };
+
+    window.addEventListener("scroll", onScroll);
+  };
+
+  /*==================== SHOW SCROLL TOP ====================*/
+  const initScrollTop = () => {
+    const scrollTop = qs(SELECTORS.scrollTop);
+
+    on(window, "scroll", () => {
+      if (!scrollTop) {
+        return;
+      }
+      scrollTop.classList.toggle(CLASS_NAMES.showScroll, window.scrollY >= 200);
+    });
+  };
+
+  /*==================== DARK LIGHT THEME ====================*/
+  const initThemeToggle = () => {
+    const themeButton = qs(SELECTORS.themeButton);
+    if (!themeButton) {
+      return;
+    }
+
+    const selectedTheme = localStorage.getItem(STORAGE_KEYS.theme);
+    const selectedIcon = localStorage.getItem(STORAGE_KEYS.icon);
+
+    const getCurrentTheme = () =>
+      document.body.classList.contains(CLASS_NAMES.darkTheme)
+        ? "dark"
+        : "light";
+    const getCurrentIcon = () =>
+      themeButton.classList.contains(CLASS_NAMES.iconTheme)
+        ? "bx-moon"
+        : "bx-sun";
+
+    if (selectedTheme) {
+      document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
+        CLASS_NAMES.darkTheme
+      );
+      themeButton.classList[selectedIcon === "bx-moon" ? "add" : "remove"](
+        CLASS_NAMES.iconTheme
+      );
+    }
+
+    on(themeButton, "click", () => {
+      document.body.classList.toggle(CLASS_NAMES.darkTheme);
+      themeButton.classList.toggle(CLASS_NAMES.iconTheme);
+      localStorage.setItem(STORAGE_KEYS.theme, getCurrentTheme());
+      localStorage.setItem(STORAGE_KEYS.icon, getCurrentIcon());
+    });
+  };
+
+  /*==================== SEE MORE ====================*/
+  const initSkillsToggle = () => {
+    const skillsButton = qs(SELECTORS.skillsButton);
+    const skillsSection = qs(SELECTORS.skillsSection);
+    const skillsItems = qsa(SELECTORS.skillsItems);
+
+    if (!skillsButton || !skillsSection) {
+      return;
+    }
+
+    on(skillsButton, "click", (event) => {
+      event.preventDefault();
+      const isExpanded = skillsSection.classList.contains(CLASS_NAMES.show);
+      skillsButton.textContent = isExpanded ? TEXT.seeMore : TEXT.seeLess;
+      skillsSection.classList.toggle(CLASS_NAMES.show);
+      skillsSection.classList.toggle(CLASS_NAMES.hide);
+      skillsItems.forEach((item) => {
+        item.classList.toggle(CLASS_NAMES.hide);
+        item.classList.toggle(CLASS_NAMES.show);
+      });
+    });
+  };
+
+  /*==================== REDUCE THE SIZE AND PRINT ON AN A4 SHEET ====================*/
+  const scaleCv = () => document.body.classList.add(CLASS_NAMES.scaleCv);
+
+  /*==================== REMOVE THE SIZE WHEN THE CV IS DOWNLOADED ====================*/
+  const removeScale = () => document.body.classList.remove(CLASS_NAMES.scaleCv);
+
+  /*==================== GENERATE PDF ====================*/
+  const initPdfGenerator = () => {
+    const areaCv = qs(SELECTORS.resumeArea);
+    const resumeButton = qs(SELECTORS.resumeButton);
+
+    if (!areaCv || !resumeButton) {
+      return;
+    }
+
+    const generateResume = () => {
+      // Use browser's native print functionality for text-selectable PDFs
+      // This ensures AI recruiters and ATS systems can parse the content
+      scaleCv();
+
+      // Wait for scaling to apply, then trigger print
+      setTimeout(() => {
+        // Store original title
+        const originalTitle = document.title;
+        // Don't set a custom title to avoid filename metadata
+        // document.title = PDF_OPTIONS.filename;
+
+        // Trigger browser's print dialog (user can save as PDF)
+        // This generates a text-selectable PDF that AI recruiters can parse
+        // Note: Users should disable headers/footers in print dialog to remove date/filename
+        window.print();
+
+        // Restore original title after a delay
+        setTimeout(() => {
+          document.title = originalTitle;
+          removeScale();
+        }, 1000);
+      }, 100);
+    };
+
+    on(resumeButton, "click", generateResume);
+  };
+
+  initMenuToggle();
+  initMobileMenuClose();
+  initScrollActive();
+  initScrollTop();
+  initThemeToggle();
+  initSkillsToggle();
+  initPdfGenerator();
+})();
